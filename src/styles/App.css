@@ -1,0 +1,46 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  color: #EEEEEE;
+}
+
+.label {
+  display: block;
+  background-color: #00ADB5;
+  padding: 0.3rem;
+  border: 1px solid #393E46;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 2px #222831;
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: black;
+}
+
+#editor {
+  width: 100%;
+  height: 50vh;
+  padding: 10px;
+  border: 2px solid #222831;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.previewContainer {
+  margin-top: 20px;
+}
+
+#preview {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #222831;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#preview img {
+  max-width: 80%;
+}
