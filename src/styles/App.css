@@ -49,3 +49,27 @@
   background-color: #222831;
   overflow: auto;
 }
+
+@media (min-width: 1200px) {
+  .App {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #editor {
+    resize: both;
+    width: 48vw;
+    height: 90vh;
+  }
+
+  .previewContainer {
+    width: 48vw;
+    margin-top: 0;
+  }
+
+  #preview {
+    overflow: auto;
+    height: 90vh;
+  }
+
+}

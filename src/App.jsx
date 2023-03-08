@@ -51,7 +51,7 @@ function App() {
 
   return (
     <main className="App">
-      <section>
+      <section className='editorContainer'>
         <label className='label' htmlFor='editor'>Editor</label>
         <textarea id="editor" value={texto} onChange={(evento) => setTexto(evento.target.value)}></textarea>
       </section>
