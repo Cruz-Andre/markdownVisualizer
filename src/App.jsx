@@ -44,7 +44,7 @@ function App() {
 
   const [texto, setTexto] = useState(estadoInicial)
   //const html = marked.parse(texto, {gfm: true, breaks: true}) 
-  const htmlclean = DOMPurify.sanitize(marked.parse(texto, { gfm: true, breaks: true }));
+  const htmlclean = DOMPurify.sanitize(marked.parse(texto, { gfm: true, breaks: true}));
 
   //console.log('sujo', html)
   //console.log('limpo', htmlclean)
@@ -55,11 +55,11 @@ function App() {
         <label className='label' htmlFor='editor'>Editor</label>
         <textarea id="editor" value={texto} onChange={(evento) => setTexto(evento.target.value)}></textarea>
       </section>
-      <section className='previewContainer'>
+      <div className='previewContainer'>
         <label className='label'>Preview</label>
-        <article id='preview' dangerouslySetInnerHTML={{ __html: htmlclean }}>
-        </article>
-      </section>
+        <div id='preview' dangerouslySetInnerHTML={{ __html: htmlclean }}>
+        </div>
+      </div>
     </main>
   )
 }

@@ -1,6 +1,6 @@
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   color: #EEEEEE;
 }
 
@@ -23,7 +23,7 @@
   padding: 10px;
   border: 2px solid #222831;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.05rem;
   line-height: 1.5;
   resize: vertical;
 }
@@ -34,13 +34,18 @@
 
 #preview {
   width: 100%;
+  min-height: 20vh;
   padding: 10px;
   border: 2px solid #222831;
   border-radius: 5px;
-  font-size: 16px;
   line-height: 1.5;
 }
 
 #preview img {
   max-width: 80%;
+}
+
+#preview pre {
+  background-color: #222831;
+  overflow: auto;
 }
