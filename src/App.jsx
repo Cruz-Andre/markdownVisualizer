@@ -3,8 +3,9 @@ import DOMPurify from 'dompurify';
 import { useState } from 'react'
 
 import './styles/App.css'
+import Footer from './components/Footer';
 
-const estadoInicial = 
+const estadoInicial =
   "# Um React Markdown Visualizer!"
   + "\n" +
   "# Um H1"
@@ -30,7 +31,7 @@ const estadoInicial =
     - sub nível de lista.
       - sub-sub nível de lista.
           - sub sub-sub nível de lista.
-  ` 
+  `
   + "\n" +
   "> Block Quotes!"
   + "\n\n" +
@@ -44,23 +45,26 @@ function App() {
 
   const [texto, setTexto] = useState(estadoInicial)
   //const html = marked.parse(texto, {gfm: true, breaks: true}) 
-  const htmlclean = DOMPurify.sanitize(marked.parse(texto, { gfm: true, breaks: true}));
+  const htmlclean = DOMPurify.sanitize(marked.parse(texto, { gfm: true, breaks: true }));
 
   //console.log('sujo', html)
   //console.log('limpo', htmlclean)
 
   return (
-    <main className="App">
-      <section className='editorContainer'>
-        <label className='label' htmlFor='editor'>Editor</label>
-        <textarea id="editor" value={texto} onChange={(evento) => setTexto(evento.target.value)}></textarea>
-      </section>
-      <div className='previewContainer'>
-        <label className='label'>Preview</label>
-        <div id='preview' dangerouslySetInnerHTML={{ __html: htmlclean }}>
+    <>
+      <main className="App">
+        <section className='editorContainer'>
+          <label className='label' htmlFor='editor'>Editor</label>
+          <textarea id="editor" value={texto} onChange={(evento) => setTexto(evento.target.value)}></textarea>
+        </section>
+        <div className='previewContainer'>
+          <label className='label'>Preview</label>
+          <div id='preview' dangerouslySetInnerHTML={{ __html: htmlclean }}>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }
 
